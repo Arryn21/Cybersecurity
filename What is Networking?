@@ -1,0 +1,114 @@
+Network:
+
+Network can be formed by anywhere from 2 devices to billions. 
+These devices include everything from your laptop and phone to security cameras, traffic lights and even framing!
+    Framing is the process of adding headers and trailers to a set of data bits to create a frame. 
+    This frame contains information relevent to the data transfer, such as: Source and Destination, Frame length, A frame check sequence, etc.
+
+------------------------------------------------------------------------------------------------
+
+Internet:
+
+The Internet is one giant network that consists of many, many samll networks within itself.
+
+Suppose there are 5 friends. A, B, C, D, E.
+A and B speaks one language. D and E speaks another. But C speaks common language. 
+So they will need to communicate through C. 
+This forms a network with a mediator(Internet), just like the networks in the sense of computer.
+
+First use of internet > ARPANET (Advanced Research Projects Agency Network) > 1960s
+    Project funded by US defence department > First documented in action.
+WWW (World wide web) > Tim Berners-Lee > 1989
+
+So, The Internet is made up of many small networks all joined together. 
+These small networks are called private networks, where networks connecting these samll networks are called public networks - or the Internet.
+There are 2 types of network:
+  Private Network
+  Public Network
+
+------------------------------------------------------------------------------------------------
+
+Identifying Devices on a Network:
+
+To Communicate and Maintain order, devices must be both identifying and identifiable on a network.
+
+Devices and Humans are similar in the ways of being identified:
+    Our Name : Can be changed
+    Our Fingerprints : Cannot be changed
+
+    IP Address : Internet Protocal : Can be changed
+    MAC Address : Media Access Control : Cannot be Changed
+
+IP ADDRESSES:
+This is used to identify a host on a network for a period of time.
+
+In a dynamic IP address assignment scenario, a device is assigned an IP address for a temporary period, typically by a network's DHCP (Dynamic Host Configuration Protocol) server. This temporary assignment allows the device to communicate on the network. After a certain period or under specific conditions, the device may release its current IP address back to the pool of available addresses, and the DHCP server can then assign a new IP address to the device.
+
+In a Static IP Address, IP remains constant. 
+Here are some key characteristics of a static IP address:
+
+Permanence: Once set, a static IP address does not change unless manually reconfigured. This provides consistency in identifying and accessing a specific device on a network.
+
+Manual Configuration: Network administrators or users configure static IP addresses manually on the device itself or through network configuration settings. This involves specifying the IP address, subnet mask, gateway, and DNS server information.
+
+Usage Scenarios:
+
+Servers: Static IP addresses are commonly used for servers (web servers, email servers, etc.) to ensure that clients can reliably connect to these services using a fixed address.
+Network Devices: Some network devices, like routers or network-attached storage (NAS) devices, may use static IP addresses for easier management.
+
+Octet#1 Octet#2 Octet#3 Octet#4
+  192.    168.    1.      1
+ 0-255   0-255  0-255   0-255    
+
+An IP Address is a set of numbers that are divided into four octets.
+This number is calculated by a technique known as IP addressing and subnetting.
+IP addresses can change from device to device but cannot be active simultaneuosly more than once within the same network.
+IP addresses follow a set of standards known as protocols.
+These protocols are the backbone of networking and force many devices to communicate in the same language.
+Type of IP address (public or private) depends on where they are.
+
+A Public address is used to identify the device on the internet.
+A Private address is used to identify a device amongst other devices.
+
+Device Name      IP Address    	IP Address Type
+DESKTOP-KJE57FD	 192.168.1.77	  Private
+DESKTOP-KJE57FD	 86.157.52.21	  Public
+CMNatic-PC	     192.168.1.74	  Private
+CMNatic-PC	     86.157.52.21   Public
+
+These devices will be able to use their private IP addresses to communicate with each other. However, any data sent to the Internet from either of these devices will be identified by the same public IP address. Public IP addresses are given by your Internet Service Provider (ISP) at a monthly fee (your Bill)
+
+As more and more devices become connected, it is becoming increasingly harder to get a public address that isn't already in use. 
+Cisco(Networking Giant) estimated approx. 50 Billion devices will be connected on the Internet by the end of 2021. 
+
+IPv4 > 2^32 numbering system > 4.29 billion IP addresses. > so there's so much of shortage.
+IPv6 > 2^128 numbering system > 340 trillion + > more efficient due to new methodologies.
+
+IPv4 : 86.157.52.21 : 4 octets
+IPv6 : 2a00:22c4:a531:c500:425f:cce6:c36b:f64d : 8 octets
+
+MAC Addresses:
+Devices on a Network will all have a physical network interface, which is a microchip board found on the device's motherboard.
+This network interface is assigned a unique address at the factory it was built at, called MAC(Media Access Control) Address.
+It is a 12 Character hexadecimal number. (base 16 numbering system used in computing to represent numbers) split into 2's and separated by a colon. These colons are considered as separators. 
+a4:c3:f0:85:ac:2d (of Intel company)
+First 6 characters represent the company that made the network interface and the last 6 is a unique number.
+
+BUT MAC Address can be spoofed to pretend to be someone else to again unauthorized access.
+Suppose: A firewall is configured to allow any communication going to and from the MAC address of the administrator. If a device were to pretend or "spoof" this MAC address, the firewall would now think that it is receiving communication from the administrator when it isn't.
+
+Places such as cafes, coffee shops, and hotels alike often use MAC address control when using their 'Guest' or 'Public' Wi-Fi. This Configuration could offer better services, i.e. a faster connection for a price if you are willing to pay the fee per device.
+
+------------------------------------------------------------------------------------------------
+
+PING (ICMP):
+Ping is the most fundamental tool.
+It uses ICMP (Internet Control Message Protocol) packets to determine the performance of a connection between devices, for example, if the connection exists or is reliable.
+
+The TIME taken for ICMP packets travelling between devices is measured by ping.
+This measuring is done using ICMP's echo packet and then ICMP's echo reply from the target device.
+
+Pings can be performed against devices on a network, such as your home network or resources like websites. This tool can be easiy used and comes installed on OSs(Operating Systems) such as Linux and Windows.
+Syntax: ping <IP Address> or <URL>
+
+------------------------------------------------------------------------------------------------
