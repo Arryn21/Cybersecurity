@@ -1,0 +1,25 @@
+Local Area Network (LAN) Topologies
+
+Topology is just name referring to the design of how a network would like.
+
+=> Star Topology
+Devices are individually connected via a central networking device such as a switch or hub.
+Most Common - Reliable & Scalable
+But more Expensive
+
+=> Bus Topology
+Devices relie on single connection know as backbone cable.
+Prone to becoming slow and bottlenecked.
+Difficult to troubleshoot.
+Easy to setup and Cost-efficiet.
+If Cable breaks, we cannot transmit data.
+
+=> Ring Topology
+AKA Token topology.
+They are connected in a loop.
+No Bottlenecks. 
+Device sends its own data first.
+Not much effiect coz data has to travel so many devices to reach the destination.
+
+
+=? Switch
