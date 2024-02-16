@@ -1,0 +1,75 @@
+=>  The CIA Triad
+
+1. **CIA Triad Overview:**
+   - The CIA triad (Confidentiality, Integrity, Availability) is a foundational information security model used in developing security policies, emphasizing the continuous cycle of these three elements.
+
+2. **Historical Significance:**
+   - Originating in 1998, the CIA triad extends beyond cybersecurity, addressing information security in various contexts like filing and record storage.
+
+3. **Continuous Cycle:**
+   - Unlike traditional models, the CIA triad is a continuous cycle where the three elements overlap, and if one is compromised, the others become ineffective.
+
+4. **Confidentiality:**
+   - Protects data from unauthorized access and misuse, ensuring sensitive information is accessible only to authorized parties, illustrated through examples like HR records and government sensitivity classifications.
+
+5. **Integrity:**
+   - Ensures information accuracy and consistency, preventing unauthorized changes, with defenses like access control, authentication, hash verifications, and digital signatures.
+
+6. **Availability:**
+   - Focuses on data accessibility for authorized users, crucial for organizations with benchmarks like 99.99% uptime, achieved through reliable hardware, redundant technology, and robust security protocols.
+
+7. **Holistic Security Policy:**
+   - An effective security policy must address all three elements of the CIA triad, as any compromise in one can impact the overall security posture of the system or organization.
+
+=>  Principles of Priviledges
+
+1. **Access Management Overview:**
+   - Managing levels of access in an information technology system is crucial, based on an individual's role and the sensitivity of stored information.
+
+2. **Factors Determining Access:**
+   - Access levels are determined by an individual's role/function within the organization and the sensitivity of the stored information.
+
+3. **Key Concepts:**
+   - Two key concepts for access management are Privileged Identity Management (PIM) and Privileged Access Management (PAM).
+
+4. **Privileged Identity Management (PIM):**
+   - Translates a user's organizational role into an access role on a system, focusing on defining the level of access based on the user's function.
+
+5. **Privileged Access Management (PAM):**
+   - Manages the privileges associated with a system's access role, encompassing more than just assigning access, including security policies, password management, auditing, and reducing attack surfaces.
+
+6. **Principle of Least Privilege:**
+   - Users should be granted the minimum privileges necessary for their duties, ensuring trust in their actions and minimizing potential security risks.
+
+7. **PAM's Comprehensive Scope:**
+   - Beyond access assignment, PAM includes enforcing security policies, managing passwords, auditing practices, and reducing the system's vulnerability to potential attacks.
+
+8. **Trust and Accountability:**
+   - The principle of least privilege and effective access management contribute to creating a trustworthy environment where users are accountable for their actions.
+
+=>  Security Models
+
+**Bell-La Padula Model (Confidentiality):**
+- **Objective:** Achieve confidentiality in information systems.
+- **Rule:** "No write down, no read up."
+- **Advantages:**
+  - Aligns with hierarchical organizational structures.
+  - Simple to implement and understand.
+  - Proven success in governmental and military organizations.
+- **Disadvantages:**
+  - Users may be aware of the existence of objects without access.
+  - Requires a high level of trust within the organization.
+- **Context:** Effective for organizations with a well-established hierarchy and trusted members, commonly used in government and military settings.
+
+**Biba Model (Integrity):**
+- **Objective:** Achieve data integrity in information systems.
+- **Rule:** "No write up, no read down."
+- **Advantages:**
+  - Simple implementation.
+  - Resolves limitations of the Bell-La Padula model by addressing both confidentiality and data integrity.
+- **Disadvantages:**
+  - Many levels of access and objects, making oversight possible.
+  - May result in operational delays, such as in healthcare settings.
+- **Context:** Suitable for situations where integrity is prioritized over confidentiality, like in software development where developers only need access to relevant code.
+
+Both models are security models used to enforce access controls and align with the principles of the CIA triad, emphasizing the need for confidentiality (Bell-La Padula) or integrity (Biba) in information systems.
