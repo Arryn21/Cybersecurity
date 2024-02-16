@@ -1,11 +1,15 @@
 Local Area Network (LAN) Topologies
 
+Introducing LAN Topologies
+
 Topology is just name referring to the design of how a network would like.
+
 
 => Star Topology
 Devices are individually connected via a central networking device such as a switch or hub.
 Most Common - Reliable & Scalable
 But more Expensive
+
 
 => Bus Topology
 Devices relie on single connection know as backbone cable.
@@ -13,6 +17,7 @@ Prone to becoming slow and bottlenecked.
 Difficult to troubleshoot.
 Easy to setup and Cost-efficiet.
 If Cable breaks, we cannot transmit data.
+
 
 => Ring Topology
 AKA Token topology.
@@ -22,4 +27,98 @@ Device sends its own data first.
 Not much effiect coz data has to travel so many devices to reach the destination.
 
 
-=? Switch
+=> Switch
+1. Switches aggregate and connect multiple devices in a network through ports of varying numbers (4, 8, 16, 24, 32, 64).
+2. Switches efficiently manage network traffic by sending packets only to the intended device, reducing overall congestion.
+3. Switches are ideal for larger networks like businesses or schools where numerous devices need to be connected.
+4. Switches are more advanced than hubs/repeaters, keeping track of device connections and optimizing data transmission.
+5. Connecting switches and routers in a network enhances redundancy, ensuring reliability by providing multiple data paths in case of a failure.
+
+
+=> Router
+1. Routers connect and pass data between different networks.
+2. Routing is the process of establishing a path for data to travel across networks.
+3. Routers are essential when devices are connected by multiple paths, ensuring successful data delivery.
+4. The term "router" comes from its primary function of routing data between networks.
+5. Routing is crucial for efficient communication across interconnected networks.
+
+
+A Primer on Subnetting
+
+1. **Subnetting Overview:**
+   - Subnetting involves dividing a network into smaller segments to efficiently manage and organize network resources.
+
+2. **Purpose of Subnetting:**
+   - In a business setting, subnetting helps categorize departments like Accounting, Finance, and Human Resources, ensuring proper data routing.
+
+3. **IP Address Components:**
+   - IP addresses consist of four octets. Subnet masks, also represented by four bytes, are used to define network structures.
+
+4. **Types of IP Addresses in Subnets:**
+   - Network Address: Identifies the start of a network (e.g., 192.168.1.0).
+   - Host Address: Identifies devices within a subnet (e.g., 192.168.1.100).
+   - Default Gateway: Special address for sending data to other networks (e.g., 192.168.1.254).
+
+5. **Subnetting in Practice:**
+   - Small networks (e.g., home) often use a single subnet, while businesses employ subnetting for efficient management of numerous devices.
+
+6. **Benefits of Subnetting:**
+   - Efficiency, Security, and Full Control are key advantages of subnetting.
+  
+7. **Security Example:**
+   - Subnetting enables the segregation of networks in locations like cafes, separating employee devices from the public hotspot while maintaining connectivity to larger networks like the Internet.
+
+
+The ARP Protocol:
+1. **ARP Protocol Overview:**
+   - ARP (Address Resolution Protocol) associates MAC addresses with IP addresses on a network, allowing devices to identify each other.
+
+2. **Device Identifiers:**
+   - Devices have both MAC and IP addresses, and ARP helps link them together.
+
+3. **Communication Process:**
+   - Devices broadcast ARP requests to find the MAC address associated with a specific IP address on the network.
+
+4. **Cache Storage:**
+   - Each device maintains an ARP cache, storing the MAC addresses of other devices on the network.
+
+5. **ARP Messages:**
+   - ARP protocol uses two messages:
+      - ARP Request: Broadcast to inquire about the MAC address for a given IP.
+      - ARP Reply: Sent in response to an ARP request, confirming the association between IP and MAC addresses.
+
+6. **Mapping Identifiers:**
+   - ARP works by mapping IP addresses to MAC addresses, creating associations stored in device caches.
+
+7. **Cache Entry:**
+   - Upon receiving an ARP reply, the requesting device stores the association in its cache as an ARP entry.
+
+8. **Communication Initiation:**
+   - Devices use ARP to discover and communicate with other devices on the network, ensuring effective data exchange.
+
+
+The DHCP Protocol
+
+1. **DHCP Protocol Overview:**
+   - DHCP (Dynamic Host Configuration Protocol) automatically assigns IP addresses to devices on a network, streamlining the configuration process.
+
+2. **Address Assignment:**
+   - Devices can have IP addresses assigned manually or automatically through DHCP.
+
+3. **DHCP Discover:**
+   - When a device connects to a network without a manually assigned IP, it sends a DHCP Discover request to identify DHCP servers.
+
+4. **DHCP Offer:**
+   - The DHCP server responds with a DHCP Offer, providing an available IP address for the device.
+
+5. **DHCP Request:**
+   - The device accepts the offered IP address by sending a DHCP Request to the DHCP server.
+
+6. **DHCP ACK:**
+   - The DHCP server acknowledges the request with a DHCP ACK, allowing the device to use the assigned IP address.
+
+7. **Automatic IP Configuration:**
+   - DHCP simplifies network setup by automating the IP address assignment process, enhancing efficiency.
+
+8. **Dynamic IP Allocation:**
+   - DHCP dynamically allocates IP addresses, ensuring optimal utilization of available addresses on the network.
