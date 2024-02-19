@@ -1,0 +1,48 @@
+https://tryhackme.com/room/ohsint
+
+Got an Image to download
+
+download exiftool to get metadata of the image: 
+https://exiftool.org/
+
+Read the readme file in the downloaded content to learn how to use that tool.
+
+MY output:
+└─# ./exiftool ../../WindowsXP.jpg
+ExifTool Version Number         : 12.77
+File Name                       : WindowsXP.jpg
+Directory                       : ../..
+File Size                       : 234 kB
+File Modification Date/Time     : 2024:02:19 17:20:59+05:30
+File Access Date/Time           : 2024:02:19 17:23:14+05:30
+File Inode Change Date/Time     : 2024:02:19 17:21:05+05:30
+File Permissions                : -rwxrwxrwx
+File Type                       : JPEG
+File Type Extension             : jpg
+MIME Type                       : image/jpeg
+XMP Toolkit                     : Image::ExifTool 11.27
+GPS Latitude                    : 54 deg 17' 41.27" N
+GPS Longitude                   : 2 deg 15' 1.33" W
+Copyright                       : OWoodflint
+Image Width                     : 1920
+Image Height                    : 1080
+Encoding Process                : Baseline DCT, Huffman coding
+Bits Per Sample                 : 8
+Color Components                : 3
+Y Cb Cr Sub Sampling            : YCbCr4:2:0 (2 2)
+Image Size                      : 1920x1080
+Megapixels                      : 2.1
+GPS Latitude Ref                : North
+GPS Longitude Ref               : West
+GPS Position                    : 54 deg 17' 41.27" N, 2 deg 15' 1.33" W
+
+
+Q1. I got name from Copyright tag. and searched it on google to find the avatar(dp) of the social media account. 
+
+Q2. Hint:  BSSID + Wigle.net
+
+https://www.wigle.net/
+
+on the twitter account we found BSSID
+
+we put the BSSID into wigle search query and we get loaction : london
