@@ -45,4 +45,16 @@ https://www.wigle.net/
 
 on the twitter account we found BSSID
 
-we put the BSSID into wigle search query and we get loaction : london
+we put the BSSID into wigle advanced search query and we get loaction : london
+and also ssid: UnileverWiFi
+comment: Appended by chickensec on 2019-12-18 21:12:42: TryHackMeFlag Appended by joshaman on 2020-03-01 23:57:42: bop Appended by cybname on 2020-03-23 10:10:53: s Appended by kal...aya on 2020-04-20 20:51:13: Appended by kdan on 2020-04-21
+
+
+Then with same author name.. therer's a github account
+there we find the mail address
+
+There's a wordpress link where we find the holiday location
+
+So on the wordpress page.. Do CTRL+a > to select all and the password will be visible.
+
+DONE!!!
