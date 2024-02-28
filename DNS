@@ -1,0 +1,105 @@
+**DNS (Domain Name System) in Detail:**
+
+**What is DNS?**
+DNS (Domain Name System) is a system that translates user-friendly domain names into IP addresses, allowing devices on the internet to communicate. It simplifies the process of accessing websites by replacing complex IP addresses with easy-to-remember domain names.
+
+**Domain Hierarchy:**
+
+**TLD (Top-Level Domain):**
+- The rightmost part of a domain name, like .com in tryhackme.com.
+- Two types: gTLD (Generic Top Level Domain) and ccTLD (Country Code Top Level Domain).
+- Examples: .com (gTLD), .co.uk (ccTLD).
+
+**Second-Level Domain:**
+- Preceding the TLD in a domain name, like tryhackme in tryhackme.com.
+- Limited to 63 characters + TLD, using a-z, 0-9, and hyphens.
+
+**Subdomain:**
+- Situated on the left side of the Second-Level Domain, separated by periods.
+- Limited to 63 characters, using a-z, 0-9, and hyphens, with a total domain name length of 253 characters or less.
+
+**DNS Record Types:**
+
+**A Record:**
+- Resolves to IPv4 addresses (e.g., 104.26.10.229).
+
+**AAAA Record:**
+- Resolves to IPv6 addresses (e.g., 2606:4700:20::681a:be5).
+
+**CNAME Record:**
+- Resolves to another domain name, used for aliases or subdomains.
+
+**MX Record:**
+- Resolves to email server addresses with priority flags for handling domain emails.
+
+**TXT Record:**
+- Free text field storing text-based data, often used for email server authorization or domain ownership verification.
+
+**What happens when you make a DNS request:**
+1. Local cache check on your computer for recent lookups.
+2. If not found, Recursive DNS Server (provided by ISP or chosen by the user) is queried.
+3. Recursive DNS Server either returns the result from its cache or starts the lookup process.
+4. Root DNS servers redirect to the correct TLD server.
+5. TLD server provides information on authoritative servers for the domain.
+6. Authoritative DNS server holds and provides the required DNS records.
+7. The response is sent back through Recursive DNS Server to the client, with caching based on TTL.
+
+
+
+
+**Command Line tool: nslookup**
+
+1. **Querying A Record for website.thm:**
+   ```bash
+   nslookup --type=A website.thm
+   ```
+
+   Output:
+   ```
+   Non-authoritative answer:
+   Name: website.thm
+   Address: 10.10.10.10
+   ```
+
+2. **Querying CNAME Record for shop.website.thm:**
+   ```bash
+   nslookup --type=CNAME shop.website.thm
+   ```
+
+   Output:
+   ```
+   Non-authoritative answer:
+   shop.website.thm canonical name = shops.myshopify.com
+   ```
+
+3. **Querying MX Record for website.thm:**
+   ```bash
+   nslookup --type=MX website.thm
+   ```
+
+   Output:
+   ```
+   Non-authoritative answer:
+   website.thm mail exchanger = 30 alt4.aspmx.l.google.com      >> 30 is numerical priority value
+   ```
+
+4. **Querying TXT Record for website.thm:**
+   ```bash
+   nslookup --type=TXT website.thm
+   ```
+
+   Output:
+   ```
+   Non-authoritative answer:
+   website.thm text = "THM{7012BBA60997F35A9516C2E16D2944FF}"
+   ```
+
+These commands allow you to perform DNS queries for different record types on the specified domain names. Note that the `--type` flag is used to specify the type of DNS record you want to query.
+
+
+**DNS Record TTL (Time To Live):**
+- Specifies how long a DNS record should be cached locally.
+  
+**Types of DNS Servers:**
+- Recursive DNS Server: Provided by ISPs, handles DNS queries on behalf of clients.
+- Authoritative DNS Server: Holds and provides DNS records for a specific domain.
