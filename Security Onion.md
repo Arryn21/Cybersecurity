@@ -11,5 +11,5 @@ for downloading image of security onion
 find so-setup-network and run it
 > ./so-setup-network
 
-![WhatsApp Image 2024-11-16 at 23 09 57_c8014334](https://github.com/user-attachments/assets/e3368060-8591-44b3-9c99-68134d26cbfe)
+![continue to install](https://github.com/user-attachments/assets/e3368060-8591-44b3-9c99-68134d26cbfe)
 
